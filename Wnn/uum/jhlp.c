@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002, 2003, 2006, 2009, 2013
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2003, 2006, 2009, 2013, 2015
  * Copyright Canna Project 2002
  * Copyright Taketo Kabe 2003
  *
@@ -1135,7 +1135,7 @@ chld_handler (int sig)
       else
         {
           signal (SIGCHLD, SIG_IGN);
-          printf (MSG_GET (3));
+          printf ("%s", MSG_GET (3));
           /*
              printf("\r\nｕｕｍを終わります。\r\n");
            */
@@ -1151,7 +1151,7 @@ chld_handler (int sig)
   if (wait (0) == child_id)
     {
       signal (SIGCHLD, SIG_IGN);
-      printf (MSG_GET (3));
+      printf ("%s", MSG_GET (3));
       /*
          printf("\r\nｕｕｍを終わります。\r\n");
        */
@@ -1212,8 +1212,8 @@ do_main (void)
 
   if ((buf = (unsigned char *) malloc (maxchg * 4)) == NULL)
     {
-      printf (MSG_GET (2));
-      printf (MSG_GET (3));
+      printf ("%s", MSG_GET (2));
+      printf ("%s", MSG_GET (3));
       /*
          printf("malloc に失敗しました。ｕｕｍを終わります。\r\n");
        */

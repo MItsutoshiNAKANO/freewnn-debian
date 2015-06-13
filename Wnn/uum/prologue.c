@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
  *
  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
@@ -144,7 +144,7 @@ allocate_areas ()
       /*
          fprintf(stderr,"初期化でmalloc不能。\n");
        */
-      fprintf (stderr, MSG_GET (2));
+      fprintf (stderr, "%s", MSG_GET (2));
       return (-1);
     }
 

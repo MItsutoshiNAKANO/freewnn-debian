@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
  *
  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
@@ -112,7 +112,7 @@ word_list1 (flag, tbl)
       u_s_on ();
       w_printf (kana_buf, maxlength - strlen (MSG_GET (27)) - 2);
       u_s_off ();
-      printf (MSG_GET (27));
+      printf ("%s", MSG_GET(27));
       flush ();
       keyin ();
       return (NULL);

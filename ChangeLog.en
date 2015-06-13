@@ -1,3 +1,15 @@
+Sun, 14 Jun 2015 06:41:18  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* Wnn/uum/kensaku.c(word_list1): fixed printf format.
+	* Wnn/uum/termio.c(openTermData): fixed fprintf format.
+	* Wnn/uum/jhlp.c(chld_handler) (do_main): fixed printf formats.
+	* Wnn/uum/wnnrc_op.c(open_uumrc): fixed printf format.
+	* Wnn/uum/jutil.c(jishoadd): fixed printf format.
+	* Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
+	* Wnn/uum/kuten.c(in_kuten): fixed printf format.
+	* Wnn/uum/jis_in.c(in_jis): fixed printf format.
+
+
 Mon, 18 May 2015 02:25:00  Tomoki AONO <aonoto at users.osdn.me>
 
 	* ChangeLog, ChangeLog.en, configure, configure.in:

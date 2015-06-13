@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002, 2006
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2006, 2015
  *
  * Maintainer:  FreeWnn Project
  *
@@ -100,7 +100,7 @@ openTermData ()
 
   if ((strlen (Term_Name) > 2) && (strcmp (Term_Name + (strlen (Term_Name) - 2), "-j") == 0))
     {
-      fprintf (stderr, MSG_GET (4));
+      fprintf (stderr, "%s", MSG_GET (4));
       /*
          fprintf(stderr,"Uum:ｕｕｍからｕｕｍはおこせません。\n");
        */

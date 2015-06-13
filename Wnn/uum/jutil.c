@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
  *
  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
@@ -489,7 +489,7 @@ jishoadd ()
   /*
      printf("只今、辞書を読み込んでいます。");
    */
-  printf (MSG_GET (60));
+  printf ("%s", MSG_GET (60));
   flush ();
 
   if ((id = jl_dic_add (bun_data_, fname, hfname, 0, prio, rdonly, hrdonly, NULL, NULL, yes_or_no_or_newline, print_msg1)) == -1 && wnn_errorno != -1)

@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
  *
  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
@@ -754,7 +754,7 @@ open_uumrc ()
       return fp;
     }
 error:
-  fprintf (stderr, MSG_GET (14));
+  fprintf (stderr, "%s", MSG_GET (14));
 /*
     fprintf(stderr , "uumrc ファイルがありません。");
 */
