@@ -41,6 +41,15 @@
 #include <sys/param.h>
 #endif
 
+// GNU/Hurd doen't have MAXPATHLEN
+#ifndef MAXPATHLEN
+#  ifdef PATH_MAX
+#    define     MAXPATHLEN      PATH_MAX
+#  else
+#    define     MAXPATHLEN      1024
+#  endif
+#endif
+
 struct msg_bd
 {
   int msg_id;

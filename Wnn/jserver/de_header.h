@@ -73,6 +73,14 @@
 #define MAX_FILES       600
 #define MAX_DIC         1200
 
+#ifndef MAXPATHLEN
+#  ifdef PATH_MAX
+#    define     MAXPATHLEN      PATH_MAX
+#  else
+#    define     MAXPATHLEN      1024
+#  endif
+#endif
+
 /* constants for one client */
 /*
 #define USER_NAME_LEN 20
