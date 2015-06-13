@@ -1,3 +1,25 @@
+freewnn (1.1.1~a023-1) UNRELEASED; urgency=medium
+
+  * control(Maintainer): New maintainer Mitsutoshi NAKANO <ItSANgo@gmail.com>
+    (Closes: #714683) (Closes: #781433).
+
+  * New upstream update to 1.1.1~a23
+    Please see http://osdn.jp/projects/freewnn/releases/63271 .
+  * New upstream update to 1.1.1~a22
+    Please see http://osdn.jp/projects/freewnn/releases/59257 .
+
+  * control(Homepage): modified.
+  * control(Standards-Version): updated 3.9.4 -> 3.9.6.
+
+  * freewnn-jserver.install: added atod, atof and dtoa commands.
+  * patches/fix-parallel-build.patch: deleted
+    because upstream already imported.
+  * patches/hardening-flags: deleted, because upstream already imported.
+  * patches/newlayout: deleted.  Does not need.
+  * patches/series: deleted 3 patches.
+
+ -- Mitsutoshi NAKANO <ItSANgo@gmail.com>  Sun, 31 May 2015 17:46:17 +0900
+
 freewnn (1.1.1~a021+cvs20130302-4) unstable; urgency=low
 
   * QA upload.

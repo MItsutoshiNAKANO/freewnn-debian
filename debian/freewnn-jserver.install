@@ -1,3 +1,6 @@
+usr/bin/atod
+usr/bin/atof
+usr/bin/dtoa
 usr/bin/oldatonewa
 usr/bin/uum
 usr/bin/wddel
