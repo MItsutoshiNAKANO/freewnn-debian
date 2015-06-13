@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH CDTOA \  "13 May 1992"
+.TH CDTOA 1  "13 May 1992"
 .SH NAME
 cdtoa \- To convert the binary format of a dictionary back to
         text format.

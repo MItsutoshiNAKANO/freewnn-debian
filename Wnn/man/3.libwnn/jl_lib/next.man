@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH JL_NEXT \  "30 September 1991"
+.TH JL_NEXT 3  "30 September 1991"
 .SH Ì¾¾Î
 .sv 1
 .nf

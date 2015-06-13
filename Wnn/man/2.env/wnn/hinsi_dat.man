@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH HINSI.DATA \  "28 January 1992" 
+.TH HINSI.DATA 5  "28 January 1992" 
 .SH Ì¾¾Î
 .sv 1
 .nf

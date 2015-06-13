@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH UUMRC \  "28 January 1992" 
+.TH UUMRC 5  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -218,8 +218,8 @@ uum のユーザ名(uum(1) 参照)に展開する。
 .SH 関連項目
 .sv 1
 .nf
-uum(1), jserver(1), SYS_DIC(5), USR_DIC(5), uumkey(4),
-cvt_key_tbl(4), オートマトン(3)
+uum(1), jserver(1), SYS_DIC(5), USR_DIC(5), uumkey(5),
+cvt_key_tbl(5), オートマトン(3)
 
 
 

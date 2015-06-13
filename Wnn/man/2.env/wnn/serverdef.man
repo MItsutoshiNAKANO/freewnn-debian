@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH SERVERDEFS \  "28 January 1992" 
+.TH SERVERDEFS 5  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -81,6 +81,6 @@ inet domain の socket で接続を行なう場合の tcp のポート番号を指定する。
 .SH 関連項目
 .sv 1
 .nf
-uum(1), jserver(1)
+uum(1), jserver(8)
 
 

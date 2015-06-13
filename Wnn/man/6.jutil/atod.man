@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH ATOD \  "28 January 1992" 
+.TH ATOD 1  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -67,7 +67,7 @@ CSWIDTH=b1[:c1][,b2[:c2][,b3[:c3]]]
 
 UJIS の場合の CSWIDTH は 2,1,2 である。
 
--s は、割当てるメモリの量を指定するオプションであるが、通常は指定する必要
+\-s は、割当てるメモリの量を指定するオプションであるが、通常は指定する必要
 はない。atod がメモリ領域不足のメッセージを表示して終了した場合に、-s を
 指定して再実行させる。
 

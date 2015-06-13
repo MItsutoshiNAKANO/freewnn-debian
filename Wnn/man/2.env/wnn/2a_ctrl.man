@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH 2A_CTRL \  "28 January 1992" 
+.TH 2A_CTRL 5  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -72,6 +72,6 @@ PF1〜PF4 のキーおよびカーソルキーについては、次のような注意が必要
 .SH 関連項目
 .sv 1
 .nf
-uum(1), mode(4), uumkey(4), cvt_key_tbl(4), オートマトン(3)
+uum(1), mode(5), uumkey(5), cvt_key_tbl(5), オートマトン(3)
 
 

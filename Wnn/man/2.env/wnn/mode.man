@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH MODE \  "28 January 1992" 
+.TH MODE 5  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -60,6 +60,6 @@ uum は、モード定義表を以下の順番でサーチする。
 .SH 関連項目
 .sv 1
 .nf
-uum(1), uumrc(4), オートマトン(3)
+uum(1), uumrc(5), オートマトン(3)
 
 

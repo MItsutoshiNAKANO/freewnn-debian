@@ -27,7 +27,7 @@
 .\" along with this program; if not, write to the Free Software
 .\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .\"
-.TH UUMKEY \  "28 January 1992" 
+.TH UUMKEY 5  "28 January 1992" 
 .SH 名称
 .sv 1
 .nf
@@ -374,4 +374,4 @@ henkan_on エントリに設定するコードには、キーコード変換の出力コードは書けない。
 .SH 関連項目
 .sv 1
 .nf
-uum(1), uumrc(4), cvt_key_tbl(4), オートマトン(3)
+uum(1), uumrc(5), cvt_key_tbl(5), オートマトン(3)
