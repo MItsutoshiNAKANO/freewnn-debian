@@ -1,0 +1,221 @@
+From: Mitsutoshi NAKANO <ItSANgo@gmail.com>
+Date: Sun, 14 Jun 2015 06:41:18 +0900
+Subject: fix-printf-format
+
+* Wnn/uum/kensaku.c(word_list1): fixed printf format.
+* Wnn/uum/termio.c(openTermData): fixed fprintf format.
+* Wnn/uum/jhlp.c(chld_handler) (do_main): fixed printf formats.
+* Wnn/uum/wnnrc_op.c(open_uumrc): fixed printf format.
+* Wnn/uum/jutil.c(jishoadd): fixed printf format.
+* Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
+* Wnn/uum/kuten.c(in_kuten): fixed printf format.
+* Wnn/uum/jis_in.c(in_jis): fixed printf format.
+
+	modified:   debian/changelog
+---
+ Wnn/uum/jhlp.c     | 10 +++++-----
+ Wnn/uum/jis_in.c   |  4 ++--
+ Wnn/uum/jutil.c    |  4 ++--
+ Wnn/uum/kensaku.c  |  4 ++--
+ Wnn/uum/kuten.c    |  4 ++--
+ Wnn/uum/prologue.c |  4 ++--
+ Wnn/uum/termio.c   |  4 ++--
+ Wnn/uum/wnnrc_op.c |  4 ++--
+ 9 files changed, 29 insertions(+), 20 deletions(-)
+
+diff --git a/Wnn/uum/jhlp.c b/Wnn/uum/jhlp.c
+index 1a6e3b0..8341c72 100644
+--- a/Wnn/uum/jhlp.c
++++ b/Wnn/uum/jhlp.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002, 2003, 2006, 2009, 2013
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2003, 2006, 2009, 2013, 2015
+  * Copyright Canna Project 2002
+  * Copyright Taketo Kabe 2003
+  *
+@@ -1135,7 +1135,7 @@ chld_handler (int sig)
+       else
+         {
+           signal (SIGCHLD, SIG_IGN);
+-          printf (MSG_GET (3));
++          printf ("%s", MSG_GET (3));
+           /*
+              printf("\r\nｕｕｍを終わります。\r\n");
+            */
+@@ -1151,7 +1151,7 @@ chld_handler (int sig)
+   if (wait (0) == child_id)
+     {
+       signal (SIGCHLD, SIG_IGN);
+-      printf (MSG_GET (3));
++      printf ("%s", MSG_GET (3));
+       /*
+          printf("\r\nｕｕｍを終わります。\r\n");
+        */
+@@ -1212,8 +1212,8 @@ do_main (void)
+ 
+   if ((buf = (unsigned char *) malloc (maxchg * 4)) == NULL)
+     {
+-      printf (MSG_GET (2));
+-      printf (MSG_GET (3));
++      printf ("%s", MSG_GET (2));
++      printf ("%s", MSG_GET (3));
+       /*
+          printf("malloc に失敗しました。ｕｕｍを終わります。\r\n");
+        */
+diff --git a/Wnn/uum/jis_in.c b/Wnn/uum/jis_in.c
+index 7c05f89..4569a1d 100644
+--- a/Wnn/uum/jis_in.c
++++ b/Wnn/uum/jis_in.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000
++ * Copyright FreeWnn Project 1999, 2000, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -64,7 +64,7 @@ in_jis ()                       /*  returns code for a moji  */
+ 
+ completely_start:
+   throw_c (0);                  /* モード表示の後に出す */
+-  printf (MSG_GET (6));
++  printf ("%s", MSG_GET (6));
+   /*
+      printf("JISコード: ");
+    */
+diff --git a/Wnn/uum/jutil.c b/Wnn/uum/jutil.c
+index cb90efb..6d81b79 100644
+--- a/Wnn/uum/jutil.c
++++ b/Wnn/uum/jutil.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -489,7 +489,7 @@ jishoadd ()
+   /*
+      printf("只今、辞書を読み込んでいます。");
+    */
+-  printf (MSG_GET (60));
++  printf ("%s", MSG_GET (60));
+   flush ();
+ 
+   if ((id = jl_dic_add (bun_data_, fname, hfname, 0, prio, rdonly, hrdonly, NULL, NULL, yes_or_no_or_newline, print_msg1)) == -1 && wnn_errorno != -1)
+diff --git a/Wnn/uum/kensaku.c b/Wnn/uum/kensaku.c
+index b9ae1bf..d8f7e00 100644
+--- a/Wnn/uum/kensaku.c
++++ b/Wnn/uum/kensaku.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -112,7 +112,7 @@ word_list1 (flag, tbl)
+       u_s_on ();
+       w_printf (kana_buf, maxlength - strlen (MSG_GET (27)) - 2);
+       u_s_off ();
+-      printf (MSG_GET (27));
++      printf ("%s", MSG_GET(27));
+       flush ();
+       keyin ();
+       return (NULL);
+diff --git a/Wnn/uum/kuten.c b/Wnn/uum/kuten.c
+index d7ffcbb..df0ad69 100644
+--- a/Wnn/uum/kuten.c
++++ b/Wnn/uum/kuten.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000
++ * Copyright FreeWnn Project 1999, 2000, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -63,7 +63,7 @@ in_kuten ()                     /*  returns code for a moji  */
+ 
+ completely_start:
+   throw_c (0);                  /* モード表示の後に出す */
+-  printf (MSG_GET (7));
++  printf ("%s", MSG_GET (7));
+   /*
+      printf("区点 : ");
+    */
+diff --git a/Wnn/uum/prologue.c b/Wnn/uum/prologue.c
+index 3b6217c..7171061 100644
+--- a/Wnn/uum/prologue.c
++++ b/Wnn/uum/prologue.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -144,7 +144,7 @@ allocate_areas ()
+       /*
+          fprintf(stderr,"初期化でmalloc不能。\n");
+        */
+-      fprintf (stderr, MSG_GET (2));
++      fprintf (stderr, "%s", MSG_GET (2));
+       return (-1);
+     }
+ 
+diff --git a/Wnn/uum/termio.c b/Wnn/uum/termio.c
+index d92bdb2..35fc282 100644
+--- a/Wnn/uum/termio.c
++++ b/Wnn/uum/termio.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002, 2006
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2006, 2015
+  *
+  * Maintainer:  FreeWnn Project
+  *
+@@ -100,7 +100,7 @@ openTermData ()
+ 
+   if ((strlen (Term_Name) > 2) && (strcmp (Term_Name + (strlen (Term_Name) - 2), "-j") == 0))
+     {
+-      fprintf (stderr, MSG_GET (4));
++      fprintf (stderr, "%s", MSG_GET (4));
+       /*
+          fprintf(stderr,"Uum:ｕｕｍからｕｕｍはおこせません。\n");
+        */
+diff --git a/Wnn/uum/wnnrc_op.c b/Wnn/uum/wnnrc_op.c
+index a1ab294..0d81fdf 100644
+--- a/Wnn/uum/wnnrc_op.c
++++ b/Wnn/uum/wnnrc_op.c
+@@ -10,7 +10,7 @@
+  *                 1987, 1988, 1989, 1990, 1991, 1992
+  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+- * Copyright FreeWnn Project 1999, 2000, 2002
++ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
+  *
+  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+  *
+@@ -754,7 +754,7 @@ open_uumrc ()
+       return fp;
+     }
+ error:
+-  fprintf (stderr, MSG_GET (14));
++  fprintf (stderr, "%s", MSG_GET (14));
+ /*
+     fprintf(stderr , "uumrc ファイルがありません。");
+ */
