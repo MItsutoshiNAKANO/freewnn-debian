@@ -10,7 +10,12 @@ Subject: fix-printf-format
 * Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
 * Wnn/uum/kuten.c(in_kuten): fixed printf format.
 * Wnn/uum/jis_in.c(in_jis): fixed printf format.
+
+	modified:   ChangeLog
+	modified:   ChangeLog.en
 ---
+ ChangeLog          | 12 ++++++++++++
+ ChangeLog.en       | 12 ++++++++++++
  Wnn/uum/jhlp.c     | 10 +++++-----
  Wnn/uum/jis_in.c   |  4 ++--
  Wnn/uum/jutil.c    |  4 ++--
@@ -19,8 +24,51 @@ Subject: fix-printf-format
  Wnn/uum/prologue.c |  4 ++--
  Wnn/uum/termio.c   |  4 ++--
  Wnn/uum/wnnrc_op.c |  4 ++--
- 8 files changed, 19 insertions(+), 19 deletions(-)
+ 10 files changed, 43 insertions(+), 19 deletions(-)
 
+diff --git a/ChangeLog b/ChangeLog
+index 9b746db..9d1a25c 100644
+--- a/ChangeLog
++++ b/ChangeLog
+@@ -3,6 +3,18 @@
+   Japanese...
+  */
+ 
++Sun, 14 Jun 2015 06:41:18  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
++
++	* Wnn/uum/kensaku.c(word_list1): fixed printf format.
++	* Wnn/uum/termio.c(openTermData): fixed fprintf format.
++	* Wnn/uum/jhlp.c(chld_handler) (do_main): fixed printf formats.
++	* Wnn/uum/wnnrc_op.c(open_uumrc): fixed printf format.
++	* Wnn/uum/jutil.c(jishoadd): fixed printf format.
++	* Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
++	* Wnn/uum/kuten.c(in_kuten): fixed printf format.
++	* Wnn/uum/jis_in.c(in_jis): fixed printf format.
++
++
+ Mon, 18 May 2015 02:25:00  Tomoki AONO <aonoto at users.osdn.me>
+ 
+ 	* ChangeLog, ChangeLog.en, configure, configure.in:
+diff --git a/ChangeLog.en b/ChangeLog.en
+index 4f48ff9..1f4e941 100644
+--- a/ChangeLog.en
++++ b/ChangeLog.en
+@@ -1,3 +1,15 @@
++Sun, 14 Jun 2015 06:41:18  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
++
++	* Wnn/uum/kensaku.c(word_list1): fixed printf format.
++	* Wnn/uum/termio.c(openTermData): fixed fprintf format.
++	* Wnn/uum/jhlp.c(chld_handler) (do_main): fixed printf formats.
++	* Wnn/uum/wnnrc_op.c(open_uumrc): fixed printf format.
++	* Wnn/uum/jutil.c(jishoadd): fixed printf format.
++	* Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
++	* Wnn/uum/kuten.c(in_kuten): fixed printf format.
++	* Wnn/uum/jis_in.c(in_jis): fixed printf format.
++
++
+ Mon, 18 May 2015 02:25:00  Tomoki AONO <aonoto at users.osdn.me>
+ 
+ 	* ChangeLog, ChangeLog.en, configure, configure.in:
 diff --git a/Wnn/uum/jhlp.c b/Wnn/uum/jhlp.c
 index 1a6e3b0..8341c72 100644
 --- a/Wnn/uum/jhlp.c
