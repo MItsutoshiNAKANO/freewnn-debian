@@ -2,3 +2,4 @@ makerules.mk.in
 man
 hurd_support.patch
 0004-fix-printf-format.patch
+0005-fix-print_msg_getc.patch
