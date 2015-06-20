@@ -10,8 +10,6 @@ Subject: fix-printf-format
 * Wnn/uum/prologue.c(allocate_areas): fixed fprintf format.
 * Wnn/uum/kuten.c(in_kuten): fixed printf format.
 * Wnn/uum/jis_in.c(in_jis): fixed printf format.
-
-	modified:   debian/changelog
 ---
  Wnn/uum/jhlp.c     | 10 +++++-----
  Wnn/uum/jis_in.c   |  4 ++--
@@ -21,7 +19,7 @@ Subject: fix-printf-format
  Wnn/uum/prologue.c |  4 ++--
  Wnn/uum/termio.c   |  4 ++--
  Wnn/uum/wnnrc_op.c |  4 ++--
- 9 files changed, 29 insertions(+), 20 deletions(-)
+ 8 files changed, 19 insertions(+), 19 deletions(-)
 
 diff --git a/Wnn/uum/jhlp.c b/Wnn/uum/jhlp.c
 index 1a6e3b0..8341c72 100644
