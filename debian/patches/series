@@ -3,4 +3,4 @@ man
 hurd_support.patch
 0005-fix-printf-format.patch
 0006-fix-print_msg_getc.patch
-0008-fix-printf-string-printf-s-string-in-yes_or_no_or_ne.patch
+0008-fix-printf.patch
