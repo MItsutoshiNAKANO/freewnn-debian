@@ -3,3 +3,4 @@ man
 hurd_support.patch
 0005-fix-printf-format.patch
 0005-fix-printf.patch
+0006-fix-print_msg-macros.patch
