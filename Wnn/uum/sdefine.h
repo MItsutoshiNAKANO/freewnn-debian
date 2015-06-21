@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2006
+ * Copyright FreeWnn Project 1999, 2000, 2006, 2015
  *
  * Maintainer:  FreeWnn Project
  *
@@ -191,8 +191,8 @@ struct kansuu
 
 
 #define flush() fflush(stdout)
-#define print_msg(X) {push_cursor();throw_c(0); clr_line();printf(X);flush();pop_cursor();}
-#define print_msg_getc(X) {push_cursor();throw_c(0); clr_line();printf(X);flush();keyin();pop_cursor();}
+#define print_msg(X) {push_cursor();throw_c(0); clr_line();fputs((X), stdout);flush();pop_cursor();}
+#define print_msg_getc(X) {push_cursor();throw_c(0); clr_line();fputs((X), stdout);flush();keyin();pop_cursor();}
 
 
 #define UNDER_LINE_MODE (0x02 | 0x08 | 0x20)
