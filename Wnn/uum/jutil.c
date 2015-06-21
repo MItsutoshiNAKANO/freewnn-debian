@@ -571,7 +571,7 @@ yes_or_no_or_newline (string)
   int x;
   throw_c (0);
   clr_line ();
-  printf (string);
+  printf ("%s", string);
   flush ();
   for (;;)
     {

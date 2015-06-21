@@ -1,3 +1,14 @@
+Sun, 21 Jun 2015 11:59:19  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* Wnn/uum/select_ele.c: added Copyright 2015.
+	(display_all): fixed printf(msg) -> printf("%s", msg).
+	* Wnn/uum/screen.c: added Copyright 2015.
+	(print_buf_msg): fixed printf(string) -> printf("%s", string).
+	* Wnn/uum/jutil.c (yes_or_no_or_newline): fixed printf(string) -> printf("%s", string).
+
+	* ChangeLog.en: added these entries.
+	* ChangeLog: added these entries.
+
 Sun, 14 Jun 2015 06:41:18  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
 	* Wnn/uum/kensaku.c(word_list1): fixed printf format.

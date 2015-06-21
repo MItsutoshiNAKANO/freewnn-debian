@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002, 2012
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2012, 2015
  *
  * Maintainer:  FreeWnn Project
  *
@@ -224,7 +224,7 @@ display_all (mm, cc)
 
   throw_c (0);
   clr_line ();
-  printf (msg);
+  printf ("%s", msg);
   for (k = dd[cc]; k < dd[cc + 1]; k++)
     {
       cp = findcp (k, cc);
