@@ -3,6 +3,22 @@
   Japanese...
  */
 
+Sun, 12, Jul 2015 11:32:16  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* makerule.mk.in (MANDIR)
+	(LIBMANDIR): added $(MANLANG).
+	* Wnn/man/2.env/dic/Makefile.in (MANLANG): added.
+	* Wnn/man/2.env/wnn/Makefile.in (MANLANG): added.
+	* Wnn/man/3.libwnn/jl_lib/Makefile.in (MANLANG): added.
+	* Wnn/man/3.libwnn/js_lib/Makefile.in (MANLANG): added.
+	* Wnn/man/3.libwnn/misc_lib/Makefile.in (MANLANG): added.
+	* Wnn/man/3.libwnn/rk_lib/Makefile.in (MANLANG): added.
+	* Wnn/man/4.cmd/Makefile.in (MANLANG): added.
+	* Wnn/man/6.jutil/Makefile.in (MANLANG): added.
+
+	* ChangeLog: added these entries.
+	* ChangeLog.en: added these entries.
+
 Sun, 21 Jun 2015 19:23:13  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
 	* Wnn/uum/sdefine.h: added Copyright 2015.

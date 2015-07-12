@@ -11,7 +11,7 @@
 # Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
 # Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
 # Copyright FreeWnn Project
-#		  1999, 2000, 2001, 2003, 2006, 2007, 2010, 2011, 2013
+#		  1999, 2000, 2001, 2003, 2006, 2007, 2010, 2011, 2013, 2015
 # 
 # Maintainer:  FreeWnn Project
 # 
@@ -46,8 +46,8 @@ all::
 # for libtool (AM_PROG_LIBTOOL)
 #     top_builddir = @abs_top_srcdir@
 
-           MANDIR = @mandir@/man$(MANSUFFIX)
-        LIBMANDIR = @mandir@/man$(LIBMANSUFFIX)
+           MANDIR = @mandir@/$(MANLANG)/man$(MANSUFFIX)
+        LIBMANDIR = @mandir@/$(MANLANG)/man$(LIBMANSUFFIX)
 
         MANSUFFIX = 1
      LIBMANSUFFIX = 3
