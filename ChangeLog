@@ -3,6 +3,17 @@
   Japanese...
  */
 
+Sat, 18, Jul 2015 08:26:31  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* Wnn/Makefile.in (LIB_SUBDIRS)
+	(WNNMANENDIR): added man.en for English manuals.
+	* Wnn/man.en/Makefile.in: added for English manuals.
+	* Wnn/man.en/6.jutil/Makefile.in: added for English manuals.
+	* configure.in: added Makefiles.
+
+	* ChangeLog: added this entry.
+	* ChangeLog.en: added this entry.
+
 Sun, 12, Jul 2015 11:32:16  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
 	* makerule.mk.in (MANDIR)

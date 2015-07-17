@@ -907,7 +907,8 @@ if test "x${Wnn}" = "xWnn"; then
 	Wnn/man/4.cmd/Makefile Wnn/man/6.jutil/Makefile \
 	Wnn/man/2.env/dic/Makefile Wnn/man/2.env/wnn/Makefile \
 	Wnn/man/3.libwnn/jl_lib/Makefile Wnn/man/3.libwnn/js_lib/Makefile \
-	Wnn/man/3.libwnn/misc_lib/Makefile Wnn/man/3.libwnn/rk_lib/Makefile"
+	Wnn/man/3.libwnn/misc_lib/Makefile Wnn/man/3.libwnn/rk_lib/Makefile \
+	Wnn/man.en/Makefile Wnn/man.en/6.jutil/Makefile"
   makefiles_wnn_dic="Contrib/dic/gerodic/Makefile Wnn/pubdicplus/Makefile \
 	Wnn/wnncons/Makefile Wnn/wnncons/dic/Makefile"
 fi

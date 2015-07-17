@@ -165,13 +165,13 @@
 /* Define to 1 if you have the `strrchr' function. */
 #undef HAVE_STRRCHR
 
-/* Define to 1 if `ut_id' is member of `struct utmp'. */
+/* Define to 1 if `ut_id' is a member of `struct utmp'. */
 #undef HAVE_STRUCT_UTMP_UT_ID
 
-/* Define to 1 if `ut_name' is member of `struct utmp'. */
+/* Define to 1 if `ut_name' is a member of `struct utmp'. */
 #undef HAVE_STRUCT_UTMP_UT_NAME
 
-/* Define to 1 if `ut_user' is member of `struct utmp'. */
+/* Define to 1 if `ut_user' is a member of `struct utmp'. */
 #undef HAVE_STRUCT_UTMP_UT_USER
 
 /* Define to 1 if you have the `syslog' function. */
@@ -237,8 +237,12 @@
 /* Define to 1 if you have the `wait3' function. */
 #undef HAVE_WAIT3
 
-/* Define to 1 if you have the file `AC_File'. */
+/* Define to 1 if you have the file `/dev/ptmx'. */
 #undef HAVE__DEV_PTMX
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
 
 /* Define to the address where bug reports for this package should be sent. */
 #undef PACKAGE_BUGREPORT
@@ -251,6 +255,9 @@
 
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION

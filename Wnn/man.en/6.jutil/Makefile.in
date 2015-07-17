@@ -1,5 +1,5 @@
 #
-#   $Id: Makefile.in,v 1.10 2006/11/19 16:21:22 aonoto Exp $
+#   $Id$
 #
 
 #
@@ -10,7 +10,7 @@
 #                 1987, 1988, 1989, 1990, 1991, 1992
 # Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
 # Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
-# Copyright FreeWnn Project 1999, 2000, 2001, 2006, 2015
+# Copyright FreeWnn Project 1999, 2000, 2001, 2010, 2015
 # 
 # Maintainer:  FreeWnn Project
 # 
@@ -31,52 +31,26 @@
 
 include @top_builddir@/makerule.mk
 top_builddir = @top_builddir@
+      srcdir = @srcdir@
 
-WNNOWNER= wnn
+INSTALL         = @INSTALL@ $(INSTALLFLAGS)
 
-JSERVERDIR = jserver
+MANSUFFIX = 1
+MANLANG=
 
-PUBDICPLUSDIR = pubdicplus
+MANUALS = atod.man dtoa.man atof.man
 
-WNNCONSDIR = wnncons
-
-WNNJUTILDIR = jutil
-
-WNNCLIENTSDIR = conv
-
-JLIBDIR = include romkan jlib
-
-WNNENVDIR = ld
-
-JDDIR = jd
-
-WNNMANDIR = man
-
-WNNMANENDIR= man.en
-
-JLIBV3DIR = jlib.V3
-
-UUMDIR = uum
-
-LIB_SUBDIRS =  $(JDDIR) $(JLIBDIR) $(WNNMANDIR) $(WNNMANENDIR) $(WNNENVDIR) $(JLIBV3DIR)
-
-SERVER_SUBDIRS = $(JSERVERDIR) $(WNNJUTILDIR) $(PUBDICPLUSDIR) $(WNNCONSDIR) $(WNNMANDIR)
-
-CLIENT_SUBDIRS = $(WNNCLIENTSDIR) $(UUMDIR)
-
-SUBDIRS = @SUBDIRS@
-
-install::
-	@for flag in ${MAKEFLAGS} ''; do \
-	case "$$flag" in *=*) ;; *[i]*) set +e;; esac; done; \
-	for i in $(WNNWNNDIR); do if [ -d $(DESTDIR)$$i ]; then \
-	set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i); fi; \
+# Probably we don't need $(MANUALS) as dependency ...
+install.man::
+	@if [ -d $(DESTDIR)$(MANDIR) ]; then set +x; \
+	else (set -x; $(MKDIRHIER) $(DESTDIR)$(MANDIR)); fi
+	for m in $(MANUALS); do \
+	  manname=`basename $$m .man | sed '$(transform)'`; \
+	  $(RM) $(DESTDIR)$(MANDIR)/$$manname.$(MANSUFFIX)*; \
+	  $(INSTALL) $(INSTMANFLAGS) $(srcdir)/$$m \
+	   $(DESTDIR)$(MANDIR)/$$manname.$(MANSUFFIX); \
 	done
-
-install::
-	@for flag in ${MAKEFLAGS} ''; do \
-	case "$$flag" in *=*) ;; *[i]*) set +e;; esac; done; \
-	for i in $(JWNNWNNDIR); do if [ -d $(DESTDIR)$$i ]; then \
-	set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i); fi; \
+	-for m in $(MANUALS); do \
+	  manname=`basename $$m .man | sed '$(transform)'`; \
+	  $(COMPRESSMANCMD) $(DESTDIR)$(MANDIR)/$$manname.$(MANSUFFIX); \
 	done
-
