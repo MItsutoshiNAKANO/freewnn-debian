@@ -5,3 +5,4 @@ hurd_support.patch
 0005-fix-printf.patch
 0006-fix-print_msg-macros.patch
 0007-move-Japanese-man-files-to-ja-directory.patch
+0008-add-Makefile.in-for-English-mans-and-autoreconf.patch
