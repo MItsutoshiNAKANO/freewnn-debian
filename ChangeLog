@@ -2,6 +2,9 @@
   Some entries (from CVS ChangeLog) are not yet translated to
   Japanese...
  */
+Wed, 23, Aug 2015 19:15:18  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* ltmain.sh: updated to 2.4.2
 
 Sat, 18, Jul 2015 08:26:31  Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
